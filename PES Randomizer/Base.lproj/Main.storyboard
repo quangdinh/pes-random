@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EOV-Lm-SYK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PES Team Randomizer-->
+        <scene sceneID="JPE-2z-rJ3">
+            <objects>
+                <tableViewController interfaceStyle="light" id="vDY-5H-amL" customClass="TeamsViewController" customModule="PES_Randomizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Tib-JW-qCy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pesTeam" rowHeight="70" id="8cZ-hY-Rvx" customClass="TeamTableViewCell" customModule="PES_Randomizer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8cZ-hY-Rvx" id="Bae-Np-MXl">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x4F-gN-a7l">
+                                            <rect key="frame" x="5" y="5" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="92z-gV-6XH"/>
+                                                <constraint firstAttribute="height" constant="60" id="nIl-3J-Yca"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oem-gi-9FG">
+                                            <rect key="frame" x="70" y="24.5" width="324" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="GWc-el-3Ge"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oem-gi-9FG" firstAttribute="trailing" secondItem="Bae-Np-MXl" secondAttribute="trailingMargin" id="1qE-9c-nz4"/>
+                                        <constraint firstItem="oem-gi-9FG" firstAttribute="leading" secondItem="x4F-gN-a7l" secondAttribute="trailing" constant="5" id="VO3-NV-l8A"/>
+                                        <constraint firstItem="x4F-gN-a7l" firstAttribute="top" secondItem="Bae-Np-MXl" secondAttribute="top" constant="5" id="gOn-od-SRF"/>
+                                        <constraint firstItem="x4F-gN-a7l" firstAttribute="leading" secondItem="Bae-Np-MXl" secondAttribute="leading" constant="5" id="n7o-Fx-nj4"/>
+                                        <constraint firstItem="oem-gi-9FG" firstAttribute="centerY" secondItem="Bae-Np-MXl" secondAttribute="centerY" id="tr5-01-f7i"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="teamLogo" destination="x4F-gN-a7l" id="dQx-GQ-c5r"/>
+                                    <outlet property="teamName" destination="oem-gi-9FG" id="RWV-Ou-rzI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vDY-5H-amL" id="Gh4-7g-zHp"/>
+                            <outlet property="delegate" destination="vDY-5H-amL" id="eqd-8I-pat"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="PES Team Randomizer" id="kds-2M-bJo">
+                        <barButtonItem key="rightBarButtonItem" title="Random" id="Aj1-ET-wcO">
+                            <color key="tintColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="randomWithSender:" destination="vDY-5H-amL" id="CRP-BU-b3H"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="uzY-KK-ZSF" kind="showDetail" identifier="showRandomizer" id="BWN-8e-ckT"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZb-mz-kph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-475.36231884057975" y="34.821428571428569"/>
+        </scene>
+        <!--Random View Controller-->
+        <scene sceneID="Pc7-LQ-zxY">
+            <objects>
+                <viewController id="uzY-KK-ZSF" customClass="RandomViewController" customModule="PES_Randomizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qLY-lB-LqO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pes2020_videoposter" translatesAutoresizingMaskIntoConstraints="NO" id="Ah6-Jr-QPi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pU-Hh-h6e">
+                                <rect key="frame" x="57" y="211" width="300" height="300"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9sB-mj-0hp">
+                                        <rect key="frame" x="50" y="50" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="3d7-ks-s8X"/>
+                                            <constraint firstAttribute="height" constant="200" id="wHe-7X-prW"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qDp-Ci-UaB">
+                                        <rect key="frame" x="50" y="50" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="5rF-qq-Y4T"/>
+                                            <constraint firstAttribute="height" constant="200" id="M3D-er-rRe"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="9sB-mj-0hp" firstAttribute="centerX" secondItem="7pU-Hh-h6e" secondAttribute="centerX" id="19R-iy-nFj"/>
+                                    <constraint firstItem="9sB-mj-0hp" firstAttribute="centerY" secondItem="7pU-Hh-h6e" secondAttribute="centerY" id="3Ct-PA-bqN"/>
+                                    <constraint firstItem="qDp-Ci-UaB" firstAttribute="centerX" secondItem="9sB-mj-0hp" secondAttribute="centerX" id="5Ji-4W-kBj"/>
+                                    <constraint firstAttribute="height" constant="300" id="O7S-nD-d1Y"/>
+                                    <constraint firstItem="qDp-Ci-UaB" firstAttribute="centerY" secondItem="9sB-mj-0hp" secondAttribute="centerY" id="PeR-6A-UKc"/>
+                                    <constraint firstAttribute="width" constant="300" id="sXK-fQ-WNJ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nN-cW-NMx">
+                                <rect key="frame" x="57" y="211" width="300" height="300"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <connections>
+                                    <action selector="randomWithSender:" destination="uzY-KK-ZSF" eventType="touchUpInside" id="HxM-mQ-BZA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7pU-Hh-h6e" firstAttribute="centerY" secondItem="Ah6-Jr-QPi" secondAttribute="centerY" constant="-60" id="Aa2-Il-bjz"/>
+                            <constraint firstItem="7pU-Hh-h6e" firstAttribute="centerX" secondItem="Ah6-Jr-QPi" secondAttribute="centerX" id="CcC-by-wi5"/>
+                            <constraint firstItem="1nN-cW-NMx" firstAttribute="height" secondItem="7pU-Hh-h6e" secondAttribute="height" id="PNW-JG-EUJ"/>
+                            <constraint firstItem="1nN-cW-NMx" firstAttribute="centerX" secondItem="7pU-Hh-h6e" secondAttribute="centerX" id="PYH-Vr-xhb"/>
+                            <constraint firstAttribute="bottom" secondItem="Ah6-Jr-QPi" secondAttribute="bottom" id="c1w-4L-HvC"/>
+                            <constraint firstItem="1nN-cW-NMx" firstAttribute="width" secondItem="7pU-Hh-h6e" secondAttribute="width" id="nRj-HB-r75"/>
+                            <constraint firstItem="Ah6-Jr-QPi" firstAttribute="top" secondItem="MsA-3T-3FY" secondAttribute="top" id="omQ-iB-28B"/>
+                            <constraint firstItem="Ah6-Jr-QPi" firstAttribute="trailing" secondItem="MsA-3T-3FY" secondAttribute="trailing" id="sfb-iy-zlz"/>
+                            <constraint firstItem="1nN-cW-NMx" firstAttribute="centerY" secondItem="7pU-Hh-h6e" secondAttribute="centerY" id="wJW-lZ-DaP"/>
+                            <constraint firstItem="Ah6-Jr-QPi" firstAttribute="leading" secondItem="MsA-3T-3FY" secondAttribute="leading" id="yf3-QQ-XRq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MsA-3T-3FY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PdK-Gt-f6z"/>
+                    <connections>
+                        <outlet property="logo" destination="9sB-mj-0hp" id="MLa-G3-Mqf"/>
+                        <outlet property="logoAlt" destination="qDp-Ci-UaB" id="2ec-Ds-1Hi"/>
+                        <outlet property="logoContainer" destination="7pU-Hh-h6e" id="ouC-iK-C5I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6J-Zy-Zch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276.81159420289856" y="24.776785714285712"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iOn-I0-oj1">
+            <objects>
+                <navigationController id="EOV-Lm-SYK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tkW-nA-zpY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.65098039220000004" green="0.039215686270000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vDY-5H-amL" kind="relationship" relationship="rootViewController" id="ZFh-ap-1aa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y7h-Oe-7Lm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1394" y="35"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pes2020_videoposter" width="980" height="551"/>
+    </resources>
+</document>
