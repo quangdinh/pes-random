@@ -12,7 +12,6 @@
 		3D41B9272355A5C500AED2E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D41B9252355A5C500AED2E8 /* Main.storyboard */; };
 		3D41B9292355A5C700AED2E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D41B9282355A5C700AED2E8 /* Assets.xcassets */; };
 		3D41B92C2355A5C700AED2E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D41B92A2355A5C700AED2E8 /* LaunchScreen.storyboard */; };
-		3D5258D323562948002CB77E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5258D223562948002CB77E /* SceneDelegate.swift */; };
 		3D765EFE2355AAC00046FF9B /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D765EFD2355AAC00046FF9B /* TeamTableViewCell.swift */; };
 		3D765F002355B6BA0046FF9B /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D765EFF2355B6BA0046FF9B /* RandomViewController.swift */; };
 /* End PBXBuildFile section */
@@ -25,7 +24,6 @@
 		3D41B9282355A5C700AED2E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D41B92B2355A5C700AED2E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D41B92D2355A5C700AED2E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D5258D223562948002CB77E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3D765EFD2355AAC00046FF9B /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		3D765EFF2355B6BA0046FF9B /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,7 +58,6 @@
 		3D41B91E2355A5C500AED2E8 /* PES Randomizer */ = {
 			isa = PBXGroup;
 			children = (
-				3D5258D223562948002CB77E /* SceneDelegate.swift */,
 				3D41B91F2355A5C500AED2E8 /* AppDelegate.swift */,
 				3D41B9232355A5C500AED2E8 /* TeamsViewController.swift */,
 				3D41B9252355A5C500AED2E8 /* Main.storyboard */,
@@ -144,7 +141,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D5258D323562948002CB77E /* SceneDelegate.swift in Sources */,
 				3D765F002355B6BA0046FF9B /* RandomViewController.swift in Sources */,
 				3D41B9242355A5C500AED2E8 /* TeamsViewController.swift in Sources */,
 				3D765EFE2355AAC00046FF9B /* TeamTableViewCell.swift in Sources */,
@@ -295,6 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VCJ52KVS72;
 				INFOPLIST_FILE = "PES Randomizer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,6 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VCJ52KVS72;
 				INFOPLIST_FILE = "PES Randomizer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

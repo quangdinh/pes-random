@@ -30,6 +30,12 @@ class RandomViewController: UIViewController {
     self.random(sender: nil)
   }
   
+  @IBAction func close(sender: UIButton!) {
+    self.dismiss(animated: true) {
+      
+    }
+  }
+  
   @IBAction func random(sender: UIButton!) {
     restartTime(interval: 0.05)
     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(2)) {
