@@ -72,15 +72,18 @@ class RandomViewController: UIViewController {
             self.timer?.invalidate()
             self.timer = nil
             let team = self.pickRandomTeam()
-            self.animateLogo(team: team)
-            if let imageName = team?.image {
-              let image = UIImage.init(named: imageName)
-              if self.teamA == nil {
-                self.teamA = team
-                self.logoTeamA.image = image
-              } else if self.teamB == nil {
-                self.teamB = team
-                self.logoTeamB.image = image
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .milliseconds(250)) {
+              self.animateLogo(team: team)
+              if let imageName = team?.image {
+                let image = UIImage.init(named: imageName)
+                if self.teamA == nil {
+                  self.teamA = team
+                  self.logoTeamA.image = image
+                } else if self.teamB == nil {
+                  self.teamB = team
+                  self.logoTeamB.image = image
+                }
               }
             }
           }

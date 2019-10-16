@@ -12,7 +12,13 @@ struct PesTeam {
   let image: String
   let name: String
   var selected = true
-  init(image: String, name: String) {
+  let attack: Int
+  let midfield: Int
+  let defense: Int
+  init(image: String, name: String, attack: Int, midfield: Int, defense: Int) {
+    self.attack = attack
+    self.midfield = midfield
+    self.defense = defense
     self.image = image
     self.name = name
     self.selected = true
@@ -21,21 +27,21 @@ struct PesTeam {
 
 class TeamsViewController: UITableViewController {
   var teams = [
-    PesTeam(image: "arsenal", name: "Arsenal"),
-    PesTeam(image: "atletico-de-madrid", name: "Atletico De Madrid"),
-    PesTeam(image: "barcelona", name: "Barcelona"),
-    PesTeam(image: "bayern-munchen", name: "Bayern Munchen"),
-    PesTeam(image: "juventus", name: "Juventus"),
-    PesTeam(image: "liverpool", name: "Liverpool"),
-    PesTeam(image: "manchester-city", name: "Manchester City"),
-    PesTeam(image: "manchester-united", name: "Manchester United"),
-    PesTeam(image: "psg", name: "PSG"),
-    PesTeam(image: "napoli", name: "Napoli"),
-    PesTeam(image: "chelsea", name: "Chelsea"),
-    PesTeam(image: "tottenham-hotspur", name: "Tottenham Hotspur"),
-    PesTeam(image: "internazionale", name: "Inter Milan"),
-    PesTeam(image: "dvb", name: "Dortmund"),
-    PesTeam(image: "real-madrid", name: "Real Madrid")
+    PesTeam(image: "arsenal", name: "Arsenal", attack: 85, midfield: 83, defense: 83),
+    PesTeam(image: "atletico-de-madrid", name: "Atletico De Madrid", attack: 88, midfield: 80, defense: 86),
+    PesTeam(image: "barcelona", name: "Barcelona", attack: 93, midfield: 86, defense: 87),
+    PesTeam(image: "bayern-munchen", name: "Bayern Munchen", attack: 88, midfield: 85, defense: 86),
+    PesTeam(image: "juventus", name: "Juventus", attack: 92, midfield: 84, defense: 85),
+    PesTeam(image: "liverpool", name: "Liverpool", attack: 89, midfield: 83, defense: 87),
+    PesTeam(image: "manchester-city", name: "Manchester City", attack: 90, midfield: 86, defense: 85),
+    PesTeam(image: "manchester-united", name: "Manchester United", attack: 83, midfield: 85, defense: 83),
+    PesTeam(image: "psg", name: "PSG", attack: 91, midfield: 82, defense: 83),
+    PesTeam(image: "napoli", name: "Napoli", attack: 84, midfield: 76, defense: 82),
+    PesTeam(image: "chelsea", name: "Chelsea", attack: 88, midfield: 83, defense: 82),
+    PesTeam(image: "tottenham-hotspur", name: "Tottenham Hotspur", attack: 88, midfield: 84, defense: 83),
+    PesTeam(image: "internazionale", name: "Inter Milan", attack: 83, midfield: 81, defense: 83),
+    PesTeam(image: "dvb", name: "Dortmund", attack: 81, midfield: 84, defense: 82),
+    PesTeam(image: "real-madrid", name: "Real Madrid", attack: 86, midfield: 86, defense: 86)
   ]
   
   override func viewDidLoad() {
