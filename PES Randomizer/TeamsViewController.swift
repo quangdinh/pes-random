@@ -12,6 +12,11 @@ struct PesTeam {
   let image: String
   let name: String
   var selected = true
+  init(image: String, name: String) {
+    self.image = image
+    self.name = name
+    self.selected = true
+  }
 }
 
 class TeamsViewController: UITableViewController {
